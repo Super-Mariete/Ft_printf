@@ -6,7 +6,7 @@
 /*   By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:12:11 by made-ped          #+#    #+#             */
-/*   Updated: 2024/09/26 00:48:33 by made-ped         ###   ########.fr       */
+/*   Updated: 2024/10/01 19:59:39 by made-ped         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,8 @@ int	main (void)
 	i = ft_printf ("%X\n", numero);
 	j = printf ("%X\n", numero);
 	printf ("ft_printf = %d\nprintf = %d\n", i, j);
+	i = ft_printf ("%c ,%s ,%d ,%%% %p\n", letra, str, numero, ptr);
+	j = printf ("%c ,%s ,%d ,%%% %p\n", letra, str, numero, ptr);
+ 	printf ("ft_printf = %d\nprintf = %d\n", i, j);
 	return (0);
 }
