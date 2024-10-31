@@ -6,7 +6,7 @@
 #    By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 21:32:36 by made-ped          #+#    #+#              #
-#    Updated: 2024/09/25 22:02:17 by made-ped         ###   ########.fr        #
+#    Updated: 2024/10/27 14:21:16 by made-ped         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ CCFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
 
 SRC = ft_printf.c\
+	ft_printf_utils.c\
+	ft_printf_utils_number.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -35,5 +37,9 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 re: fclean all
+
+test: testing.c
+	@$(CC) -w -o test testing.c ${NAME}
+	@echo "${PINK}Test compiled!${DEFCOLOR}"
 
 .PHONY : clean all fclean re
