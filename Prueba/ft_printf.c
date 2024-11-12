@@ -6,7 +6,7 @@
 /*   By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 00:36:13 by made-ped          #+#    #+#             */
-/*   Updated: 2024/11/12 00:36:20 by made-ped         ###   ########.fr       */
+/*   Updated: 2024/11/12 01:35:09 by made-ped         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_printf(const char *string, ...)
 		}
 		else
 		{
-			ft_putcharacter_length((char)string[i], &length);
+			ft_putcharacter_length(/*(char)*/string[i], &length);
 			i++;
 		}
 	}

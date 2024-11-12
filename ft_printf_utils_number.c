@@ -6,21 +6,16 @@
 /*   By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 23:08:36 by made-ped          #+#    #+#             */
-/*   Updated: 2024/10/31 02:52:27 by made-ped         ###   ########.fr       */
+/*   Updated: 2024/11/12 01:45:22 by made-ped         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hex_max(unsigned long long num)
+int	ft_print_hex_max(unsigned int num)
 {
 	int	length;
 
-	if (num == 18446744073709551615ULL)
-	{
-		write (1, "FFFFFFFFFFFFFFFF",16); 
-		return (16);
-	}
 	length = 0;
 	if (num >= 16)
 		length += ft_print_hex_max(num / 16);
@@ -29,15 +24,10 @@ int	ft_print_hex_max(unsigned long long num)
 	return (length);
 }
 
-int	ft_print_hex(unsigned long long num)
+int	ft_print_hex(unsigned int num)
 {
 	int	length;
 
-	if (num == 18446744073709551615ULL)
-	{
-		write (1, "ffffffffffffffff",16); 
-		return (16);
-	}
 	length = 0;
 	if (num >= 16)
 		length += ft_print_hex(num / 16);

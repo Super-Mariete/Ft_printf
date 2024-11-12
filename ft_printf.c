@@ -6,7 +6,7 @@
 /*   By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 00:05:53 by made-ped          #+#    #+#             */
-/*   Updated: 2024/10/31 01:29:55 by made-ped         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:29:14 by made-ped         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,11 @@ int	ft_comprobar(char c, va_list *argumentos)
 	else if (c == 'd' || c == 'i')
 		return (ft_number(va_arg(*argumentos, int)));
 	else if (c == 'p')
-		return (ft_print_p(va_arg(*argumentos, void *)));
+		return (ft_print_p(va_arg(*argumentos, unsigned int)));
 	else if (c == 'x')
-		return (ft_print_hex(va_arg(*argumentos,unsigned long long)));
+		return (ft_print_hex(va_arg(*argumentos,unsigned int)));
 	else if (c == 'X')
-		return (ft_print_hex_max(va_arg(*argumentos,unsigned long long)));
+		return (ft_print_hex_max(va_arg(*argumentos,unsigned int)));
 	else if (c == 'u')
 		return (ft_unsigned_number(va_arg(*argumentos, unsigned int)));
 	return (0);

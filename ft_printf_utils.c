@@ -6,7 +6,7 @@
 /*   By: made-ped <made-ped@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:50:17 by made-ped          #+#    #+#             */
-/*   Updated: 2024/10/27 14:32:15 by made-ped         ###   ########.fr       */
+/*   Updated: 2024/11/12 02:31:14 by made-ped         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_string(char *string)
 
 	if (!string)
 	{
-		write (1, "(null)", 6);
+		write (1, "(nil)", 5);
 		return (6);
 	}	
 	i = 0;
@@ -30,10 +30,9 @@ int	ft_string(char *string)
 	return (i);
 }
 
-int	ft_print_p(void *ptr)
+int	ft_print_p(unsigned int ptr)
 {
-	int				len;
-	unsigned long long	dir;
+	int		len;
 
 	if (!ptr)
 	{
@@ -41,10 +40,9 @@ int	ft_print_p(void *ptr)
 		return (5);
 	}
 	len = 2;
-	dir = (unsigned long long)ptr;
 	ft_write ('0');
 	ft_write ('x');
-	len += ft_print_hex(dir);
+	len += ft_print_hex(ptr);
 	return (len);
 }
 
